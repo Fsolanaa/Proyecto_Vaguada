@@ -1,0 +1,23 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+/* - AQUÍ EMPIEZA EL BOX DE CONTACTO - */
+
+
+
+  /* EMPIEZA EL CONTENEDOR DE REBAJAS */
+.box-rebajas {
+  width: 100%;
+  height: auto;
+  text-align: center;
+  margin-top: 10px;
+ 
+}
+
+
+.imagenRebaja{
+    width: 750px;
+    
+}

@@ -145,7 +145,7 @@ li:hover {
   display: block;
 }
 
-#box-contact {
+.box-contact {
   width: 100%;
   height: 50px;
   position: sticky;
@@ -159,7 +159,7 @@ li:hover {
   padding: 5px;
 }
 
-#box-contact a {
+.box-contact a {
   text-decoration: none;
   color: #fff;
   display: block;

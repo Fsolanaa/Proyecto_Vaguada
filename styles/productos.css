@@ -248,13 +248,13 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"] {
 .shop {
   width: 100%;
   border: 2px solid crimson;
-  margin-top: 0;
+  margin-top: 20%;
   text-align: center;
   justify-content: center;
   position: relative;
   float: left;
 }
-/* MENÚ DE BOTONES */
+
 /* TARJETA DE PRODUCTO */
 .personajes {
   width: 340px;
