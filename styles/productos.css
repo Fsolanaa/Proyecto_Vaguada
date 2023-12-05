@@ -5,12 +5,6 @@
   font-family: "Montserrat", sans-serif;
 }
 
-/* EMPIEZA EL HEADER */
-
-header {
-  text-align: center;
-}
-
 /* EMPIEZA EL BODY */
 
 .body {
@@ -18,105 +12,6 @@ header {
   height: auto;
   border: 2px solid black;
   background-color: #f1f1f1;
-}
-
-/* EMPIEZA EL NAV */
-
-nav {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #ff7f32;
-  padding-left: 2vw;
-}
-
-.cont-ul {
-  display: flex;
-  align-items: center;
-}
-
-li {
-  list-style: none;
-  cursor: pointer;
-  padding: 1.5vw;
-  transition: all 0.3s ease 0s;
-}
-
-a {
-  text-decoration: none;
-  color: #fff;
-  display: block;
-}
-
-li:hover {
-  background-color: #f1772d;
-}
-
-.develop {
-  position: relative;
-}
-
-.ul-second {
-  display: none;
-  position: absolute;
-  margin-top: 1.5vw;
-}
-
-.ul-second > li {
-  width: 190px;
-  transform: translateX(-20px);
-  border-bottom: solid 1px black;
-  text-align: space;
-  background-color: #ff7f32;
-}
-
-.ul-second > li:hover {
-  background-color: #f1772d;
-}
-
-.develop:hover > .ul-second {
-  display: block;
-}
-
-.ul-third {
-  position: absolute;
-  transform: translateX(100%);
-  right: 0;
-  top: 40%;
-  display: none;
-  background-color: #ff7f32;
-}
-
-.ul-third > li {
-  padding: 1.5vw;
-  border-bottom: solid 1px #fff;
-}
-
-.front:hover > .ul-third {
-  display: block;
-}
-
-/* - AQUÍ EMPIEZA EL BOX DE CONTACTO - */
-
-.box-contact {
-  width: 100%;
-  height: 50px;
-  background-color: black;
-  color: #ffffff;
-  font-size: 16px;
-  text-align: center;
-
-  padding: 5px;
-}
-
-.text-primary {
-  color: #ff7f32;
-}
-
-.punto {
-  position: relative;
-  top: 6px;
 }
 
 /* EMPIEZA EL SLIDER */
@@ -256,26 +151,27 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"] {
 }
 
 /* TARJETA DE PRODUCTO */
-.personajes {
+.productos {
   width: 340px;
   height: 430px;
   margin-top: 10px;
   padding: 1.5%;
   border-radius: 20px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-  float: left;
+  position: relative;
+  top: 0;
   text-align: center;
   color: black;
   margin-left: 2.1%;
   margin-bottom: 2%;
 }
 
-.personajes h4 {
+.productos h4 {
   position: relative;
   top: 8px;
 }
 
-.personajes p {
+.productos p {
   position: relative;
   top: 12px;
 }
@@ -504,6 +400,8 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"] {
   background-color: #f1772d;
 }
 
+
+
 button img {
   position: absolute;
   left: 5px;
@@ -517,4 +415,3 @@ button p {
   z-index: 0;
 }
 
-/* EMPIEZA EL FOOTER */
