@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/productos.css" />
+    <link rel="stylesheet" href="styles/formulario2.css" />
+
+    <title>Document</title>
+
+    <script>
+      //JAVA que es un lenguaje fuertemente tipado(Cuando pongo una variable tengo que darle un tipo)
+
+      function mostrarVentana() {
+        document.getElementById("formulario").style.display = "block";
+        document.getElementById("cuerpo").style.filter = "blur";
+      }
+      function cerrarFormulario() {
+        document.getElementById("formulario").style.display = "none";
+        document.getElementById("cuerpo").style.filter = "none";
+      }
+    </script>
+  </head>
+  <body>
+    <header>
+      <!-- Logo de la página con función back to landing page -->
+      <a href="https://centrosunico.com/">
+        <img src="img/logo.svg" class="logo.unico" />
+      </a>
+    </header>
+
+    <nav>
+      <ul class="cont-ul">
+        <li>
+          <a href="nuestroEquipo.html"><strong>NUESTRO EQUIPO</strong></a>
+        </li>
+        <li class="develop">
+          <a href="Productos.html"><strong>PRODUCTOS</strong></a>
+          <ul class="ul-second">
+            <li class="front">
+              <strong>Depilación Láser</strong>
+              <ul class="ul-third">
+                <li><strong>Depilación Láser Abdomen</strong></li>
+                <li><strong>Depilacion Láser Axilas</strong></li>
+                <li><strong>Depilacion Láser Facial</strong></li>
+                <li><strong>Depilacion Láser Brazos</strong></li>
+                <li><strong>Depilacion Láser Tórax</strong></li>
+              </ul>
+            </li>
+            <li class="front"><strong>Estética Avanzada</strong></li>
+            <li class="front"><strong>Medicina Estética</strong></li>
+            <li class="front"><strong>Perdida de Peso</strong></li>
+          </ul>
+        </li>
+        <li>
+          <a href="Promociones.html"><strong>PROMOCIONES</strong></a>
+        </li>
+        <li>
+          <a href="contacto.html"><strong>CONTACTO</strong></a>
+        </li>
+        <li>
+          <a href="Blog.html"><strong>BLOG</strong></a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Caja de diagnóstico gratuito con redireccionamiento a formulario -->
+    <div class="box-contact">
+      <!-- ABRIR FORMULARIO -->
+      <a href="#" onclick="mostrarVentana()">
+        <img class="punto" src="img/CarbonDotMark.png" />
+        <strong>PIDE TÚ CITA </strong>
+        <span class="text-primary"> AQUÍ </span>
+        <strong> PARA EL DIAGNÓSTICO GRATUITO</strong>
+        <img class="punto" src="img/CarbonDotMark.png" />
+      </a>
+    </div>
+    <main>
+      <!--EMPIEZA EL FORMULARIO-->
+      <div class="box-form">
+        <section id="formulario">
+          <form
+            id="form"
+            action="https://formsubmit.co/fsolanaaranega@gmail.com"
+            method="POST"
+          >
+            <a href="#" onclick="cerrarFormulario()">
+              <!-- CERRAR FORMULARIO -->
+              <div class="cerrar">
+                <img src="img/cerrar.png" alt="cerrar" />
+              </div>
+            </a>
+            <h2>DIAGNÓSTICO GRATUITO</h2>
+
+            <div class="input-group">
+              <!-- Nombre -->
+              <label for="name">Nombre</label><br />
+              <input type="text" name="name" id="name" placeholder="Nombre" />
+
+              <!-- Apellidos -->
+              <label for="phone">Apellidos</label><br />
+              <input
+                type="text"
+                name="apellidos"
+                id="GET-lastName"
+                placeholder="Apellidos"
+              />
+
+              <!-- Sexo -->
+              <label for="Sexo">Sexo</label><br />
+              <select name="Sexo" class="form-control">
+                <option value="Hombre">Hombre</option>
+                <option value="Mujer">Mujer</option>
+              </select>
+
+              <!-- Fecha de Nacimiento -->
+              <label for="fecha">Fecha de Nacimiento:</label><br />
+              <input type="date" name="fecha de nacimiento" id="fecha" />
+
+              <!-- Provincia -->
+              <label for="provincia">Provincia </label><br />
+              <select required name="provincia" class="form-control">
+                <option value>-Seleccionar provincia-</option>
+                <option value="Álava/Araba">Álava/Araba</option>
+                <option value="Albacete">Albacete</option>
+                <option value="Alicante">Alicante</option>
+                <option value="Almería">Almería</option>
+                <option value="Asturias">Asturias</option>
+                <option value="Ávila">Ávila</option>
+                <option value="Badajoz">Badajoz</option>
+                <option value="Baleares">Baleares</option>
+                <option value="Barcelona">Barcelona</option>
+                <option value="Burgos">Burgos</option>
+                <option value="Cáceres">Cáceres</option>
+                <option value="Cádiz">Cádiz</option>
+                <option value="Cantabria">Cantabria</option>
+                <option value="Castellón">Castellón</option>
+                <option value="Ceuta">Ceuta</option>
+                <option value="Ciudad Real">Ciudad Real</option>
+                <option value="Córdoba">Córdoba</option>
+                <option value="Cuenca">Cuenca</option>
+                <option value="Gerona/Girona">Gerona/Girona</option>
+                <option value="Granada">Granada</option>
+                <option value="Guadalajara">Guadalajara</option>
+                <option value="Guipúzcoa/Gipuzkoa">Guipúzcoa/Gipuzkoa</option>
+                <option value="Huelva">Huelva</option>
+                <option value="Huesca">Huesca</option>
+                <option value="Jaén">Jaén</option>
+                <option value="La Coruña/A Coruña">La Coruña/A Coruña</option>
+                <option value="La Rioja">La Rioja</option>
+                <option value="Las Palmas">Las Palmas</option>
+                <option value="León">León</option>
+                <option value="Lérida/Lleida">Lérida/Lleida</option>
+                <option value="Lugo">Lugo</option>
+                <option value="Madrid">Madrid</option>
+                <option value="Málaga">Málaga</option>
+                <option value="Melilla">Melilla</option>
+                <option value="Murcia">Murcia</option>
+                <option value="Navarra">Navarra</option>
+                <option value="Orense/Ourense">Orense/Ourense</option>
+                <option value="Palencia">Palencia</option>
+                <option value="Pontevedra">Pontevedra</option>
+                <option value="Salamanca">Salamanca</option>
+                <option value="Segovia">Segovia</option>
+                <option value="Sevilla">Sevilla</option>
+                <option value="Soria">Soria</option>
+                <option value="Tarragona">Tarragona</option>
+                <option value="Tenerife">Tenerife</option>
+                <option value="Teruel">Teruel</option>
+                <option value="Toledo">Toledo</option>
+                <option value="Valencia">Valencia</option>
+                <option value="Valladolid">Valladolid</option>
+                <option value="Vizcaya/Bizkaia">Vizcaya/Bizkaia</option>
+                <option value="Zamora">Zamora</option>
+                <option value="Zaragoza">Zaragoza</option>
+              </select>
+
+              <!-- Centro -->
+              <label for="Centros">Escoge Centro</label><br />
+              <select name="Centros" id="centros">
+                <option value>-seleccionar centro-</option>
+                <option value="Madrid Ayala">Madrid Ayala</option>
+                <option value="Collado Villalba">Collado Villalba</option>
+                <option value="Pinto">Pinto</option>
+                <option value="Las Rosas">Las Rosas</option>
+                <option value="Plenilunio">Plenilunio</option>
+                <option value="Leganes">Leganés</option>
+                <option value="Centro Oeste">Centro Oeste</option>
+                <option value="Gran Plaza 2">Gran Plaza 2</option>
+                <option value="Alcorcon">Alcorcón</option>
+                <option value="La Gavia">La Gavia</option>
+                <option value="Alcala de Henares">Alcala de Henares</option>
+                <option value="Alcobendas">Alcobendas</option>
+                <option value="Fuenlabrada">Fuenlabrada</option>
+                <option value="La Vaguada">La Vaguada</option>
+                <option value="Tres Cantos">Tres Cantos</option>
+              </select>
+
+              <!-- Teléfono -->
+              <label for="phone">Teléfono</label><br />
+              <input
+                type="number"
+                name="phone"
+                id="phone"
+                placeholder="Teléfono"
+              />
+
+              <!-- Escribe aquí -->
+              <label for="message"
+                >Cuéntanos brevemente en qué estás interesado para poder
+                atenderte mejor. Gracias *</label
+              >
+              <textarea
+                name="message"
+                id="message"
+                cols="30"
+                rows="5"
+                placeholder="Escribe aquí..."
+              ></textarea>
+
+              <div class="form-text">
+                <a href="https://centrosunico.com/politica-de-privacidad/"
+                  >Politica de privacidad</a
+                >
+                <a href="https://centrosunico.com/condiciones-de-contratacion/"
+                  >Condiciones de contratación</a
+                >
+              </div>
+
+              <input class="btn" type="submit" value="PEDIR DIAGNÓSTICO" />
+            </div>
+          </form>
+        </section>
+      </div>
+
+      <!-- EMPIEZA BLOQUE DE CONTENIDO-->
+      <section>
+        <!-- SLIDER AUTOMÁTICO -->
+        <div class="container-all">
+          <input type="radio" id="1" name="image-slide" hidden />
+          <input type="radio" id="2" name="image-slide" hidden />
+          <input type="radio" id="3" name="image-slide" hidden />
+
+          <div class="slide">
+            <div class="item-slide"><img src="img/slider1.jpg" alt="" /></div>
+            <div class="item-slide"><img src="img/slider2.jpg" alt="" /></div>
+            <div class="item-slide"><img src="img/slider3.jpg" alt="" /></div>
+          </div>
+          <div class="pagination">
+            <label class="pagination-item" for="1">
+              <img src="img/slider1.jpg" alt="" />
+            </label>
+            <label class="pagination-item" for="2">
+              <img src="img/slider2.jpg" alt="" />
+            </label>
+            <label class="pagination-item" for="3">
+              <img src="img/slider3.jpg" alt="" />
+            </label>
+          </div>
+        </div>
+
+        <!-- MENÚ DE BOTONES PARA REDIRECCIONAMIENTO POR CLASE DE PRODUCTO-->
+        <div>
+          <div class="productos">
+            <div class="producto1"></div>
+            <div class="producto1"></div>
+          </div>
+        </div>
+      </section>
+      <!-- SECCIÓN DE DEPILACIÓN -->
+      <section>
+
+
+        <div class="personajes">
+          <img class="imagen-producto" src="img/producto1Depi.png" alt="" />
+          <h4>TARJETA REGALO</h4>
+          <p>Si no sabes qué regalar, ¡acierta seguro con tu tarjeta regalo de Centros Único!</p>
+          <button class="boton1">
+            <img src="img/exclamationmark.png" alt="" />
+            <p><strong>MÁS INFORMACIÓN</strong></p>
+          </button>
+        </div>
+
+        <div class="personajes">
+          <img
+            class="imagen-producto"
+            src="img/producto2Depi.jpg"
+            alt="personaje-marvel-thePunisher-Puzzle"
+          />
+          <H4>DEPILACIÓN LÁSER DORSALES</H4>
+          <p>Elimina el incomodo vello de la parte superior de la espalda gracias a la depilación láser, en sesiones de 10 minutos de duración cada una</p>
+          <button class="boton2">
+            <img src="img/bolsa.png" alt="" />
+            <p><strong>AÑADIR A LA CESTA</strong></p>
+          </button>
+        </div>
+
+        <div class="personajes">
+          <img
+            class="imagen-producto"
+            src="img/producto2_index.jpg"
+            alt="AmberrRose-persoanje-marvel-thePunisher"
+          />
+          <h4>EMULSIÓN POST LÁSER FACIAL</h4>
+          <p>Emulsión pre y post láser facial de alta protección SPF50, 50ml.Triple acción: hidrata y reconforta de inmediato la piel del rostro .</p>
+          <button class="boton3">
+            <img src="img/bolsa.png" alt="" />
+            <p><strong>AÑADIR A LA CESTA</strong></p>
+          </button>
+        </div>
+
+        <div class="personajes">
+          <img
+            class="imagen-producto"
+            src="img/producto4DEPI.jpg"
+            alt="AmberrRose-persoanje-marvel-thePunisher"
+          />
+          <h4>CREMA POST LÁSER CORPORAL</h4>
+          <p>
+            La crema post-láser de Centros Único calma e hidrata la piel
+            asegurándonos que se restablece rápidamente .
+          </p>
+          <button class="boton4">
+            <img src="img/bolsa.png" alt="" />
+            <p><strong>AÑADIR A LA CESTA</strong></p>
+          </button>
+        </div>
+      </section>
+
+
+      <!-- SECCIÓN DE ESTÉTICA AVANZADA -->
+      <section>
+        <div class="personajes">
+          <img
+            class="imagen-producto"
+            src="img/producto2ESTETICA.jpg"
+            alt="persoanje-Puzzle-Marvel-Serie"
+          />
+          <h4>TOTAL FACE 4D</h4>
+          <p>
+             Es un tratamiento en alianza con Germaine de Capuccini, que trabaja tu piel en 4 dimensiones en 4 diferentes sesiones: purificante, hidratante, luminosidad y antiedad.
+            
+          </p>
+          <button class="boton5">
+            <img src="img/bolsa.png" alt="" />
+            <p><strong>AÑADIR A LA CESTA</strong></p>
+          </button>
+        </div>
+
+        <div class="personajes">
+          <img
+            class="imagen-producto"
+            src="img/PRODUCTO3ESTETICA.jpg"
+            alt="personaje-marvel-thePunisher-Puzzle"
+          />
+          <h4>CRIOLIPÓLISIS</h4>
+          <p>
+            La criolipólisis es un tratamiento reductor que reduce grasa localizada de manera permanente en el abdomen, las caderas y la cintura
+          </p>
+          <button class="boton6">
+            <img src="img/bolsa.png" alt="" />
+            <p><strong>AÑADIR A LA CESTA</strong></p>
+          </button>
+        </div>
+
+        <div class="personajes">
+          <img
+            class="imagen-producto"
+            src="img/PRODUCTO4ESTETICA.jpg"
+            alt="AmberrRose-persoanje-marvel-thePunisher"
+          />
+          <h4>HILOS REDENSIFY</h4>
+          <p>
+            Tratamiento antiedad, rellenador de arrugas y redensificador, sin agujas, que mejora las arrugas desde la primera sesion.
+          </p>
+          <button class="boton7">
+            <img src="img/bolsa.png" alt="tratamiento-centros-unico-estética-avanzada" />
+            <p><strong>AÑADIR A LA CESTA</strong></p>
+          </button>
+        </div>
+
+        <div class="personajes">
+          <img
+            class="imagen-producto"
+            src="img/producto2ESTÉTICA.jpg"
+            alt="AmberrRose-persoanje-marvel-thePunisher"
+          />
+          <h4>ACCENT PRIME</h4>
+          <p>
+          Combina dos tecnologías: los ultrasonidos y la radiofrecuencia más potente del mercado para combatir de forma eficaz, rápida y duradera problemas como el exceso de grasa.
+          </p>
+          <button class="boton8">
+            <img src="img/bolsa.png" alt="" />
+            <p><strong>AÑADIR A LA CESTA</strong></p>
+          </button>
+        </div>
+      </section>
+
+
+      <!-- SECCIÓN DE MEDICINA ESTÉTICA -->
+      <section>
+        <div class="personajes">
+          <img
+            class="imagen-producto"
+            src="img/producto1MEDI.jpg"
+            alt=""
+          />
+          <h4>HIDROLIPOCLASIA</h4>
+          <p>
+            El tratamiento reductor de grasa y volumen Hidrolipoclasia elimina de forma duradera la grasa acumulada en cartucheras, abdomen, rodillas y la cara interna de las piernas.
+          </p>
+          <button class="boton9">
+            <img src="img/bolsa.png" alt="" />
+            <p><strong>AÑADIR A LA CESTA</strong></p>
+          </button>
+        </div>
+
+        <div class="personajes">
+          <img
+            class="imagen-producto"
+            src="img/producto2MEDI.jpg"
+            alt=""
+          />
+          <h4>CONTROL MÉDICO NUTRICIONAL</h4>
+          <p>
+            Se trata de un plan médico dietético que se basa en la restitución proteica equilibrada establenciendo pautas nutricionales
+          </p>
+          <button class="boton10">
+            <img src="img/bolsa.png" alt="" />
+            <p><strong>AÑADIR A LA CESTA</strong></p>
+          </button>
+        </div>
+
+        <div class="personajes">
+          <img
+            class="imagen-producto"
+            src="img/producto3MEDI.jpg"
+            alt=""
+          />
+          <h4>INTRADERMIS REVITALIZANTE</h4>
+          <p>
+            Bioestimulación indolora que aporta una combinación de vitaminas y Ácido Hialurónico que revitaliza la piel.
+          </p>
+          <button class="boton11">
+            <img src="img/bolsa.png" alt="" />
+            <p><strong>AÑADIR A LA CESTA</strong></p>
+          </button>
+        </div>
+        
+        <div class="personajes">
+          <img
+            class="imagen-producto"
+            src="img/PRODUCTOS4MEDI.jpg"
+            alt=""
+          />
+          <h4>RELLENO DE OJERAS</h4>
+          <p>
+            El tratamiento que reduce o elimina las ojeras provocadas por el cansancio, estrés y paso del tiempo.
+          </p>
+          <button class="boton12">
+            <img src="img/bolsa.png" alt="" />
+            <p><strong>AÑADIR A LA CESTA</strong></p>
+          </button>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

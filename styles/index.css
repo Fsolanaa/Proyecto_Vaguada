@@ -1,0 +1,119 @@
+.cuerpo {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 30px;
+}
+
+.container-all {
+  margin-top: 0%;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden; /*- ESTO LO QUE HACE ES QUE NO SE SOBREPASEN LAS IMAGENES -*/
+}
+.img {
+  width: 100%;
+}
+.slide {
+  display: flex;
+  transform: translate3d(0, 0, 0);
+  transition: all 600ms;
+  animation-name: autoplay; /*- ESTO LO QUE HACE ES QUE LA ANIMACIÓN SEA AUTOMÁTICA -*/
+  animation-duration: 6.5s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards; /*- ESTO LO QUE HACE ES QUE LA ANIMACIÓN COMIENZE POR EL PRINCIPIO -*/
+  animation-iteration-count: infinite; /*- ESTO LO QUE HACE ES QUE NO TENGA FIN-*/
+}
+.item-slide {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0; /*- ESTO LO QUE HACE ES QUE ABARQUE TODO EL ESPACIO DE MANERA HORIZONTAL -*/
+  flex-grow: 0;
+  width: 100%;
+}
+.pagination {
+  position: absolute;
+  z-index: 0;
+  bottom: 20px;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap; /*- ESTO LO QUE HACE ES QUE SE AJUSTE A SU CONTENEDOR PADRE -*/
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.pagination-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid white;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: rgba(255, 225, 255, 0.5);
+  margin: 0 10px;
+  text-align: center;
+  transition: all 300ms;
+}
+
+.pagination-item:hover {
+  transform: scale(2);
+}
+.pagination-item img {
+  display: inline-block;
+  max-width: none;
+  height: 100%;
+  transform: scale(1);
+  opacity: 0;
+  transition: all 300ms;
+}
+.pagination-item:hover img {
+  /*- Cuando pasemos el cursor por encima se mostraran las mini-imagenes -*/
+  opacity: 1;
+  transform: scale(1);
+}
+
+input[id="1"]:checked ~ .slide {
+  animation: none;
+  transform: translate3d(0, 0, 0);
+}
+
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"] {
+  background: #fff;
+}
+
+input[id="2"]:checked ~ .slide {
+  animation: none;
+  transform: translate3d(calc(-100% * 1), 0, 0);
+}
+
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"] {
+  background: #fff;
+}
+
+input[id="3"]:checked ~ .slide {
+  animation: none;
+  transform: translate3d(calc(-100% * 2), 0, 0);
+}
+
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"] {
+  background: #fff;
+}
+@keyframes autoplay {
+  33% {
+    transform: translate3d(calc(-100% * 0), 0, 0);
+  }
+
+  66% {
+    transform: translate3d(calc(-100% * 1), 0, 0);
+  }
+
+  100% {
+    transform: translate3d(calc(-100% * 2), 0, 0);
+  }
+}

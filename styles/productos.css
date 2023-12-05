@@ -1,0 +1,520 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+/* EMPIEZA EL HEADER */
+
+header {
+  text-align: center;
+}
+
+/* EMPIEZA EL BODY */
+
+.body {
+  color: black;
+  height: auto;
+  border: 2px solid black;
+  background-color: #f1f1f1;
+}
+
+/* EMPIEZA EL NAV */
+
+nav {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ff7f32;
+  padding-left: 2vw;
+}
+
+.cont-ul {
+  display: flex;
+  align-items: center;
+}
+
+li {
+  list-style: none;
+  cursor: pointer;
+  padding: 1.5vw;
+  transition: all 0.3s ease 0s;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  display: block;
+}
+
+li:hover {
+  background-color: #f1772d;
+}
+
+.develop {
+  position: relative;
+}
+
+.ul-second {
+  display: none;
+  position: absolute;
+  margin-top: 1.5vw;
+}
+
+.ul-second > li {
+  width: 190px;
+  transform: translateX(-20px);
+  border-bottom: solid 1px black;
+  text-align: space;
+  background-color: #ff7f32;
+}
+
+.ul-second > li:hover {
+  background-color: #f1772d;
+}
+
+.develop:hover > .ul-second {
+  display: block;
+}
+
+.ul-third {
+  position: absolute;
+  transform: translateX(100%);
+  right: 0;
+  top: 40%;
+  display: none;
+  background-color: #ff7f32;
+}
+
+.ul-third > li {
+  padding: 1.5vw;
+  border-bottom: solid 1px #fff;
+}
+
+.front:hover > .ul-third {
+  display: block;
+}
+
+/* - AQUÍ EMPIEZA EL BOX DE CONTACTO - */
+
+.box-contact {
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: #ffffff;
+  font-size: 16px;
+  text-align: center;
+
+  padding: 5px;
+}
+
+.text-primary {
+  color: #ff7f32;
+}
+
+.punto {
+  position: relative;
+  top: 6px;
+}
+
+/* EMPIEZA EL SLIDER */
+
+.container-all {
+  margin-top: 0%;
+  position: relative;
+  z-index: 0;
+  width: 100%;
+  border-radius: 6px;
+  overflow: hidden; /*- ESTO LO QUE HACE ES QUE NO SE SOBREPASEN LAS IMAGENES -*/
+}
+
+.img {
+  width: 100%;
+}
+
+.slide {
+  display: flex;
+  transform: translate3d(0, 0, 0);
+  transition: all 600ms;
+  animation-name: autoplay; /*- ESTO LO QUE HACE ES QUE LA ANIMACIÓN SEA AUTOMÁTICA -*/
+  animation-duration: 6.5s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards; /*- ESTO LO QUE HACE ES QUE LA ANIMACIÓN COMIENZE POR EL PRINCIPIO -*/
+  animation-iteration-count: infinite; /*- ESTO LO QUE HACE ES QUE NO TENGA FIN-*/
+}
+
+.item-slide {
+  position: relative;
+  z-index: 0;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0; /*- ESTO LO QUE HACE ES QUE ABARQUE TODO EL ESPACIO DE MANERA HORIZONTAL -*/
+  flex-grow: 0;
+  width: 100%;
+}
+
+.pagination {
+  position: absolute;
+  z-index: -1;
+  bottom: 20px;
+  left: 0;
+  display: flex;
+  flex-wrap: wrap; /*- ESTO LO QUE HACE ES QUE SE AJUSTE A SU CONTENEDOR PADRE -*/
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.pagination-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 2px solid white;
+  width: 16px;
+  height: 16px;
+  border-radius: 4px;
+  overflow: hidden;
+  cursor: pointer;
+  background-color: rgba(255, 225, 255, 0.5);
+  margin: 0 10px;
+  text-align: center;
+  transition: all 300ms;
+}
+
+.pagination-item:hover {
+  transform: scale(2);
+}
+
+.pagination-item img {
+  display: inline-block;
+  max-width: none;
+  height: 100%;
+  transform: scale(1);
+  opacity: 0;
+  transition: all 300ms;
+}
+
+.pagination-item:hover img {
+  /*- Cuando pasemos el cursor por encima se mostraran las mini-imagenes -*/
+  opacity: 1;
+  transform: scale(1);
+}
+
+input[id="1"]:checked ~ .slide {
+  animation: none;
+  transform: translate3d(0, 0, 0);
+}
+
+input[id="1"]:checked ~ .pagination .pagination-item[for="1"] {
+  background: #fff;
+}
+
+input[id="2"]:checked ~ .slide {
+  animation: none;
+  transform: translate3d(calc(-100% * 1), 0, 0);
+}
+
+input[id="2"]:checked ~ .pagination .pagination-item[for="2"] {
+  background: #fff;
+}
+
+input[id="3"]:checked ~ .slide {
+  animation: none;
+  transform: translate3d(calc(-100% * 2), 0, 0);
+}
+
+input[id="3"]:checked ~ .pagination .pagination-item[for="3"] {
+  background: #fff;
+}
+
+@keyframes autoplay {
+  33% {
+    transform: translate3d(calc(-100% * 0), 0, 0);
+  }
+
+  66% {
+    transform: translate3d(calc(-100% * 1), 0, 0);
+  }
+
+  100% {
+    transform: translate3d(calc(-100% * 2), 0, 0);
+  }
+}
+
+/*-- AQUÍ EMPIEZA LA PARTE DE PRODUCTOS --*/
+
+.shop {
+  width: 100%;
+  border: 2px solid crimson;
+  margin-top: 0;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  float: left;
+}
+/* MENÚ DE BOTONES */
+/* TARJETA DE PRODUCTO */
+.personajes {
+  width: 340px;
+  height: 430px;
+  margin-top: 10px;
+  padding: 1.5%;
+  border-radius: 20px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  float: left;
+  text-align: center;
+  color: black;
+  margin-left: 2.1%;
+  margin-bottom: 2%;
+}
+
+.personajes h4 {
+  position: relative;
+  top: 8px;
+}
+
+.personajes p {
+  position: relative;
+  top: 12px;
+}
+
+.imagen-producto {
+  width: 300px;
+  border-radius: 10px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.boton1 {
+  width: 200px;
+  height: 25px;
+  margin-bottom: 10px;
+  position: relative;
+  top: 90px;
+  text-align: center;
+  left: 0px;
+  background-color: #ff7f32;
+  color: #f1f1f1;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.boton1:hover {
+  background-color: #f1772d;
+}
+
+.boton2 {
+  width: 200px;
+  height: 25px;
+  position: relative;
+  top: 45px;
+  text-align: center;
+  left: 0;
+  background-color: #ff7f32;
+  color: #f1f1f1;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.boton2:hover {
+  background-color: #f1772d;
+}
+
+.boton3 {
+  width: 200px;
+  height: 25px;
+  position: relative;
+  top: 50px;
+  text-align: center;
+  left: 0px;
+  background-color: #ff7f32;
+  color: #f1f1f1;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.boton3:hover {
+  background-color: #f1772d;
+}
+
+.boton4 {
+  width: 200px;
+  height: 25px;
+  position: relative;
+  top: 67px;
+  text-align: center;
+  left: 0px;
+  background-color: #ff7f32;
+  color: #f1f1f1;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.boton4:hover {
+  background-color: #f1772d;
+}
+
+.boton5 {
+  width: 200px;
+  height: 25px;
+  position: relative;
+  top: 30px;
+  text-align: center;
+  left: 0px;
+  background-color: #ff7f32;
+  color: #f1f1f1;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.boton5:hover {
+  background-color: #f1772d;
+}
+
+.boton6 {
+  width: 200px;
+  height: 25px;
+  position: relative;
+  top: 50px;
+  text-align: center;
+  left: 0px;
+  background-color: #ff7f32;
+  color: #f1f1f1;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.boton6:hover {
+  background-color: #f1772d;
+}
+
+.boton7 {
+  width: 200px;
+  height: 25px;
+  position: relative;
+  top: 49px;
+  text-align: center;
+  left: 0px;
+  background-color: #ff7f32;
+  color: #f1f1f1;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.boton7:hover {
+  background-color: #f1772d;
+}
+
+.boton8 {
+  width: 200px;
+  height: 25px;
+  position: relative;
+  top: 35px;
+  text-align: center;
+  left: 0px;
+  background-color: #ff7f32;
+  color: #f1f1f1;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.boton8:hover {
+  background-color: #f1772d;
+}
+
+.boton9 {
+  width: 200px;
+  height: 25px;
+  position: relative;
+  top: 32px;
+  text-align: center;
+  left: 0px;
+  background-color: #ff7f32;
+  color: #f1f1f1;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.boton9:hover {
+  background-color: #f1772d;
+}
+
+.boton10 {
+  width: 200px;
+  height: 25px;
+  position: relative;
+  top: 50px;
+  text-align: center;
+  left: 0px;
+  background-color: #ff7f32;
+  color: #f1f1f1;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.boton10:hover {
+  background-color: #f1772d;
+}
+
+.boton11 {
+  width: 200px;
+  height: 25px;
+  position: relative;
+  top: 70px;
+  text-align: center;
+  left: 0px;
+  background-color: #ff7f32;
+  color: #f1f1f1;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.boton11:hover {
+  background-color: #f1772d;
+}
+
+.boton12 {
+  width: 200px;
+  height: 25px;
+  position: relative;
+  top: 68px;
+  text-align: center;
+  left: 0px;
+  background-color: #ff7f32;
+  color: #f1f1f1;
+  border-radius: 20px;
+  cursor: pointer;
+  border: none;
+}
+
+.boton12:hover {
+  background-color: #f1772d;
+}
+
+button img {
+  position: absolute;
+  left: 5px;
+  z-index: 0;
+}
+
+button p {
+  position: absolute;
+  left: 10px;
+  bottom: 30px;
+  z-index: 0;
+}
+
+/* EMPIEZA EL FOOTER */
