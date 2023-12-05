@@ -8,15 +8,19 @@
 
 
   /* EMPIEZA EL CONTENEDOR DE REBAJAS */
-.box-rebajas {
+.contenedor-promocion {
   width: 100%;
+  position: relative;
   height: auto;
   text-align: center;
-  margin-top: 10px;
+  top: 5px;
+  margin-bottom: 10px;
+  
 }
 
 
 .rebaja1{
     width: 750px;
+    border: 1px solid black;
     
 }
