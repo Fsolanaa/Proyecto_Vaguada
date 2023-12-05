@@ -36,23 +36,27 @@ header a img {
 
 nav {
   width: 100%;
+  height: 60px;
   position: sticky;
   top: 0;
   z-index: 100;
   justify-content: center;
-  align-items: center;
+  text-align: center;
   background-color: #ff7f32;
   padding-left: 2vw;
   
 }
 
 .cont-ul {
-  display: flex;
+  position: relative;
   align-items: center;
-
+  height: 60px;
+  margin-left: 1%;
+  margin-right: 2%;
 }
 
 li {
+  width: 20%;
   list-style: none;
   cursor: pointer;
   padding: 1.5vw;
@@ -69,8 +73,38 @@ li:hover {
   background-color: #9c6644;
 }
 
+.equipo{
+  position: relative;
+  left: 0;
+  z-index: 20;
+}
+
 .develop {
   position: relative;
+  left: 20%;
+  bottom: 60px;
+  z-index: 20;
+  
+}
+
+.promo{
+  position: relative;
+  left: 40%;
+  bottom: 120px;
+  z-index: 20;
+}
+
+.contacto{
+  position: relative;
+  left: 60%;
+  bottom: 180px;
+  z-index: 20;
+}
+
+.blog{
+  position: relative;
+  left: 80%;
+  bottom: 240px;
   z-index: 20;
 }
 
@@ -100,9 +134,8 @@ li:hover {
 .box-contact {
   width: 100%;
   height: 50px;
-  position: sticky;
-  top: auto;
-
+  position: relative;
+  top: 0;
   background-color: black;
   color: #ffffff;
   font-size: 16px;
