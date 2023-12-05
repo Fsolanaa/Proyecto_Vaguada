@@ -43,7 +43,7 @@ nav {
   height: 60px;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 110;
   justify-content: center;
   text-align: center;
   background-color: #ff7f32;
