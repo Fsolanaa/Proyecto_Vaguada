@@ -185,12 +185,11 @@ nav li:hover {
 
 .footer-links h4{
   font-size: 20px;
-  color: #FFFFFF;
+  color: #00C3FF;
   margin-bottom: 25px;
   font-weight: 500;
-  border-bottom: 2px solid #00C3FF;
   display: inline-block;
-  padding-bottom: 10px;
+  padding-bottom: 50px;
 }
 
 .footer-links ul li a{
