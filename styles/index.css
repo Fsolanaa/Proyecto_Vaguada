@@ -34,7 +34,7 @@
   width: 100%;
 }
 .pagination {
-  position: absolute;
+  position: relative;
   z-index: 0;
   bottom: 20px;
   left: 0;
@@ -116,3 +116,56 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"] {
     transform: translate3d(calc(-100% * 2), 0, 0);
   }
 }
+
+
+
+
+h2{
+  margin-top: 50px;
+  text-align: center;
+}
+
+
+.marco{
+  width: 300px;
+  height: 500px;
+  border: 1px black solid;
+  border-radius: 10px;
+  float: left;
+  margin-left: 60px;
+  margin-top: 60px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.7) ;
+}
+
+
+.fotp{
+  width: 100%;
+  height: 200px;
+  position: relative;
+  border-radius: 10px;
+}
+
+h4{
+  position: relative;
+  top: 40px;
+  text-align: center;
+}
+
+.parr{
+  position: relative;
+  top: 70px;
+  padding: 6%;
+
+}
+
+.boton{
+  padding: 10px;
+  background-color:#ff7f32;
+  position: relative;
+  top: 95px;
+  left: 90px;
+  border-radius: 20px;
+  border: 1px #ff7f32 solid;
+  cursor: pointer;
+}
+

@@ -26,16 +26,18 @@ h1 {
   height: 350px;
   background-color: white;
   float: left;
-  border: 2px black solid;
+  border: 1px black solid;
   margin-left: 120px;
   padding-top: 20px;
+  border-radius: 10px;
 }
 
 .foto {
   width: 200px;
   height: 220px;
-  border: 2px black solid;
+  border: 1px black solid;
   margin-bottom: 4%;
+  border-radius: 10px;
 }
 
 .descripcion {
