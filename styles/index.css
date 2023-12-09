@@ -169,3 +169,25 @@ h4{
   cursor: pointer;
 }
 
+
+.contenedor{
+  width: 100%;
+  height: 35%;
+}
+
+.foto{
+float: right;
+}
+
+.tu{
+  position: relative;
+top: 200px;
+}
+
+.texto{
+  width: 50%;
+  height: 35%;
+  position: relative;
+  top: 90px;
+  background-color: sandybrown;
+}
