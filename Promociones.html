@@ -8,6 +8,19 @@
     <link rel="stylesheet" href="styles/promociones.css" />
     <link rel="stylesheet" href="styles/formulario2.css">
     <link rel="stylesheet" href="styles/comun.css">
+    <script>
+      //JAVA que es un lenguaje fuertemente tipado(Cuando pongo una variable tengo que darle un tipo)
+    
+      function mostrarVentana() {
+        document.getElementById("formulario").style.display = "block";
+        document.getElementById("cuerpo").style.filter = "blur";
+      }
+      function cerrarFormulario() {
+        document.getElementById("formulario").style.display = "none";
+        document.getElementById("cuerpo").style.filter = "none";
+      }
+
+    </script>
   </head>
   <body>
     <div id="header">
@@ -16,21 +29,6 @@
           <img src="img/logo.svg" class="logo" />
         </a>
       </header>
-
-      <script>
-        //JAVA que es un lenguaje fuertemente tipado(Cuando pongo una variable tengo que darle un tipo)
-      
-        function mostrarVentana() {
-          document.getElementById("formulario").style.display = "block";
-          document.getElementById("cuerpo").style.filter = "blur";
-        }
-        function cerrarFormulario() {
-          document.getElementById("formulario").style.display = "none";
-          document.getElementById("cuerpo").style.filter = "none";
-        }
-  
-      </script>
-      
       <nav>
         <ul class="cont-ul">
           <li class="equipo">
@@ -56,9 +54,6 @@
           </li>
         </ul>
       </nav>
-
-      
-
       <div class="box-contact">
         <!-- ABRIR FORMULARIO -->
         <a href="#" onclick="mostrarVentana()">
@@ -70,14 +65,6 @@
         </a>
       </div>
     </div>
-  
-    <main>
-      <div class="contenedor-promocion">
-        <img class="rebaja1" src="img/PROMOCIONES.jpg" alt="">
-        <img class="rebaja1" src="img/pngtree-christmas-balls-and-stars-background-picture-image_207908.jpg" alt="">
-      </div>
-    </main>
-
     <section id="formulario">
       <form
         id="form"
@@ -225,8 +212,65 @@
           <input class="btn" type="submit" value="PEDIR DIAGNÓSTICO" />
         </div>
       </form>
-</section>
+    </section>
+    <main>
+      <div class="contenedor-promocion">
+        <img class="rebaja1" src="img/PROMOCIONES (1).jpg" alt="">
+        <img class="rebaja1" src="img/PromocionesNavidad .jpg" alt="">
+      </div>
+
+      <section class="promos">
+     
+        <div class="marco">
+    
+          <img class="fotp" src="img/producto1Depi.png" alt="Tarjeta regalo">
   
+          <h4><strong>Tarjeta Regalo</strong></h4>
+  
+          <p class="parr">Si no sabes que regalar, una tarjeta regalo puede ser tu mejor decision para esa persona tan especial.</p>
+  
+          <button class="boton">Añadir a la cesta</button>
+  
+        </div>
+  
+        <div class="marco">
+  
+          <img class="fotp" src="img/producto2ESTÉTICA.jpg" alt="Depilacion gluteos">
+  
+          <h4><strong>Accent Prime Corporal</strong></h4>
+  
+          <p class="parr">Estrena gluteos gracias a nuestros especialistas cualificados y a buenos precios.</p>
+  
+          <button class="boton">Añadir a la cesta</button>
+  
+        </div>
+
+        <div class="marco">
+  
+          <img class="fotp" src="img/producto1MEDI.jpg" alt="Depilacion gluteos">
+  
+          <h4><strong>Depilacion gluteos</strong></h4>
+  
+          <p class="parr">Estrena gluteos gracias a nuestros especialistas cualificados y a buenos precios.</p>
+  
+          <button class="boton">Añadir a la cesta</button>
+  
+        </div>
+
+        <div class="marco">
+  
+          <img class="fotp" src="img/PRODUCTO4ESTETICA.jpg" alt="Depilacion gluteos">
+  
+          <h4><strong>Hilos redensify</strong></h4>
+  
+          <p class="parr">Rellenado de arrugas sin agujas.Trabaja el fotoenvejecimiento unificando el tono de la piel.</p>
+  
+          <button class="boton">Añadir a la cesta</button>
+  
+        </div>
+
+        
+    </main>
   <footer class="footer">
 
     <div class="container">
@@ -238,10 +282,10 @@
 
                 <h4>Compañia</h4>
                 <ul>
-                    <li><a href="#">Nosotros</a></li>
-                    <li><a href="#">Nuestros servicios</a></li>
-                    <li><a href="#">Politica de privacidad</a></li>
-                    <li><a href="#">Trabaja con nosotros</a></li>
+                    <li><a href="https://centrosunico.com/politica-de-cookies/">Política de cookies</a></li>
+                    <li><a href="https://centrosunico.com/politica-de-privacidad/">Politica de privacidad</a></li>
+                    <li><a href="https://centrosunico.com/trabaja-con-nosotros">Trabaja con nosotros</a></li>
+                    <li><a href="https://centrosunico.com/condiciones-de-contratacion/">Condiciones de contratación</a></li>
                 </ul>
             </div>
 
@@ -262,10 +306,10 @@
 
                 <h4>Tratamientos</h4>
                 <ul>
-                    <li><a href="#">Depilación laser</a></li>
+                    <li><a href="Productos.html">Depilación laser</a></li>
                     <li><a href="#">Estética avanzada</a></li>
-                    <li><a href="#">Medicina estética</a></li>
-                    <li><a href="#">Promociones</a></li>
+                    <li><a href="">Medicina estética</a></li>
+                    <li><a href="Promociones.html">Promociones</a></li>
                 </ul>
             </div>
 
